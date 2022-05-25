@@ -67,8 +67,87 @@ footer {
 h1,
 h2 {
   font-family: "myfont-2";
+  letter-spacing: 0.2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2rem;
 }
 /* 上にbodyあるが一旦追記 */
 body {
   font-family: "myfont-1";
+  font-size: 10px;
 }
+
+section p,
+section ul li,
+section ol li {
+  line-height: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+/* 隣接セレクタ */
+h2 + p {
+  text-indent: 20px;
+}
+
+a:visited,
+a:hover,
+a:focus {
+  color: #ab6666;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+/* a:focus-visible {
+  outline: solid;
+} */
+
+/* 外部リンクのみアイコン付与 (属性セレクター)*/
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  background-image: url("/external-link-52.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+}
+
+ol li {
+  /* list-style-type: "\1F44D"; */
+  list-style-type: lower-alpha;
+}
+
+/* ナビゲーション */
+nav {
+  height: 500px;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+nav ul li {
+  border: #a66 solid;
+  list-style: none;
+  height: 50px;
+}
+
+/* nav ul li a {
+  display: block;
+  margin: 0 auto;
+} */
